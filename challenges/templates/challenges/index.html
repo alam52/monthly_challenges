@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>All Challnges</title>
+        <title>All Challenges</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
@@ -11,7 +11,7 @@
     <body>
         <ul>
             {% for month in months %}
-            <li><a href="challenge.html"> {{ month|title }} </a></li>
+            <li><a href="{% url 'month-challenge' month %}"> {{ month|title }} </a></li>
             {% endfor %}
         </ul>
     </body>

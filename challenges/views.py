@@ -17,7 +17,7 @@ monthly_msgs = {
     'september': 'Ninth month',
     'october': 'Tenth month',
     'november': 'Eleventh month',
-    'december': 'Twelfth month'
+    'december': None
     }
 
 # Create your views here.
