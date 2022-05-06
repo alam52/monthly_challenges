@@ -2,7 +2,7 @@ from urllib import response
 from django.forms import model_to_dict
 from django.http import HttpResponse
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
+from django.http import Http404, HttpResponseNotFound, HttpResponseRedirect
 from django.urls import reverse
 
 monthly_msgs = {
@@ -47,5 +47,4 @@ def monthly_challenges(request, month):
             "month": month,
         })
     except:
-        return HttpResponseNotFound('<h1>Incorrect month in URL</h1>')
-    
+        raise Http404()
